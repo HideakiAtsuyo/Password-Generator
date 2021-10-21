@@ -123,7 +123,6 @@ namespace Password_Generator
             LoadConfig();
         }
 
-
         private void GHAB_Click(object sender, EventArgs e)
         {
             if(!UCHACB.Checked && !LCHACB.Checked && !DHACB.Checked && !SHACB.Checked && !BHACB.Checked)
