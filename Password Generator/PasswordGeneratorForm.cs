@@ -181,6 +181,5 @@ namespace Password_Generator
                 }).Start();
             }
         }
-
     }
 }
