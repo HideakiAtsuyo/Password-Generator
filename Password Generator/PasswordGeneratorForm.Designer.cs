@@ -29,10 +29,11 @@ namespace Password_Generator
         /// </summary>
         private void InitializeComponent()
         {
-            this.lostBorderPanel1 = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.HAResultPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.GSPHAB = new ReaLTaiizor.Controls.LostButton();
             this.PLHARTB = new System.Windows.Forms.RichTextBox();
             this.GHAB = new ReaLTaiizor.Controls.LostButton();
-            this.lostBorderPanel2 = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.HAOptionsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.lostButton1 = new ReaLTaiizor.Controls.LostButton();
             this.SaveHAB = new ReaLTaiizor.Controls.LostButton();
             this.lostLabel2 = new ReaLTaiizor.Controls.LostLabel();
@@ -44,27 +45,43 @@ namespace Password_Generator
             this.DHACB = new ReaLTaiizor.Controls.LostCheckBox();
             this.LCHACB = new ReaLTaiizor.Controls.LostCheckBox();
             this.UCHACB = new ReaLTaiizor.Controls.LostCheckBox();
-            this.lostBorderPanel1.SuspendLayout();
-            this.lostBorderPanel2.SuspendLayout();
+            this.HAResultPanel.SuspendLayout();
+            this.HAOptionsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NHAL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LHAL)).BeginInit();
             this.SuspendLayout();
             // 
-            // lostBorderPanel1
+            // HAResultPanel
             // 
-            this.lostBorderPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.lostBorderPanel1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.lostBorderPanel1.Controls.Add(this.PLHARTB);
-            this.lostBorderPanel1.Controls.Add(this.GHAB);
-            this.lostBorderPanel1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lostBorderPanel1.ForeColor = System.Drawing.Color.White;
-            this.lostBorderPanel1.Location = new System.Drawing.Point(160, 36);
-            this.lostBorderPanel1.Name = "lostBorderPanel1";
-            this.lostBorderPanel1.Padding = new System.Windows.Forms.Padding(5);
-            this.lostBorderPanel1.ShowText = true;
-            this.lostBorderPanel1.Size = new System.Drawing.Size(467, 312);
-            this.lostBorderPanel1.TabIndex = 5;
-            this.lostBorderPanel1.Text = "Generator";
+            this.HAResultPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.HAResultPanel.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.HAResultPanel.Controls.Add(this.GSPHAB);
+            this.HAResultPanel.Controls.Add(this.PLHARTB);
+            this.HAResultPanel.Controls.Add(this.GHAB);
+            this.HAResultPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.HAResultPanel.ForeColor = System.Drawing.Color.White;
+            this.HAResultPanel.Location = new System.Drawing.Point(160, 36);
+            this.HAResultPanel.Name = "HAResultPanel";
+            this.HAResultPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.HAResultPanel.ShowText = true;
+            this.HAResultPanel.Size = new System.Drawing.Size(467, 312);
+            this.HAResultPanel.TabIndex = 5;
+            this.HAResultPanel.Text = "Generator";
+            // 
+            // GSPHAB
+            // 
+            this.GSPHAB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.GSPHAB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GSPHAB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GSPHAB.ForeColor = System.Drawing.Color.White;
+            this.GSPHAB.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.GSPHAB.Image = null;
+            this.GSPHAB.Location = new System.Drawing.Point(301, 259);
+            this.GSPHAB.Name = "GSPHAB";
+            this.GSPHAB.Size = new System.Drawing.Size(151, 40);
+            this.GSPHAB.TabIndex = 8;
+            this.GSPHAB.Text = "Generate Secure Password";
+            this.GSPHAB.Click += new System.EventHandler(this.GSPHAB_Click);
             // 
             // PLHARTB
             // 
@@ -83,37 +100,37 @@ namespace Password_Generator
             this.GHAB.ForeColor = System.Drawing.Color.White;
             this.GHAB.HoverColor = System.Drawing.Color.DodgerBlue;
             this.GHAB.Image = null;
-            this.GHAB.Location = new System.Drawing.Point(162, 259);
+            this.GHAB.Location = new System.Drawing.Point(13, 259);
             this.GHAB.Name = "GHAB";
             this.GHAB.Size = new System.Drawing.Size(120, 40);
             this.GHAB.TabIndex = 6;
             this.GHAB.Text = "Generate";
             this.GHAB.Click += new System.EventHandler(this.GHAB_Click);
             // 
-            // lostBorderPanel2
+            // HAOptionsPanel
             // 
-            this.lostBorderPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.lostBorderPanel2.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.lostBorderPanel2.Controls.Add(this.lostButton1);
-            this.lostBorderPanel2.Controls.Add(this.SaveHAB);
-            this.lostBorderPanel2.Controls.Add(this.lostLabel2);
-            this.lostBorderPanel2.Controls.Add(this.NHAL);
-            this.lostBorderPanel2.Controls.Add(this.lostLabel1);
-            this.lostBorderPanel2.Controls.Add(this.LHAL);
-            this.lostBorderPanel2.Controls.Add(this.BHACB);
-            this.lostBorderPanel2.Controls.Add(this.SHACB);
-            this.lostBorderPanel2.Controls.Add(this.DHACB);
-            this.lostBorderPanel2.Controls.Add(this.LCHACB);
-            this.lostBorderPanel2.Controls.Add(this.UCHACB);
-            this.lostBorderPanel2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lostBorderPanel2.ForeColor = System.Drawing.Color.White;
-            this.lostBorderPanel2.Location = new System.Drawing.Point(5, 36);
-            this.lostBorderPanel2.Name = "lostBorderPanel2";
-            this.lostBorderPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.lostBorderPanel2.ShowText = true;
-            this.lostBorderPanel2.Size = new System.Drawing.Size(149, 312);
-            this.lostBorderPanel2.TabIndex = 11;
-            this.lostBorderPanel2.Text = "Options";
+            this.HAOptionsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.HAOptionsPanel.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.HAOptionsPanel.Controls.Add(this.lostButton1);
+            this.HAOptionsPanel.Controls.Add(this.SaveHAB);
+            this.HAOptionsPanel.Controls.Add(this.lostLabel2);
+            this.HAOptionsPanel.Controls.Add(this.NHAL);
+            this.HAOptionsPanel.Controls.Add(this.lostLabel1);
+            this.HAOptionsPanel.Controls.Add(this.LHAL);
+            this.HAOptionsPanel.Controls.Add(this.BHACB);
+            this.HAOptionsPanel.Controls.Add(this.SHACB);
+            this.HAOptionsPanel.Controls.Add(this.DHACB);
+            this.HAOptionsPanel.Controls.Add(this.LCHACB);
+            this.HAOptionsPanel.Controls.Add(this.UCHACB);
+            this.HAOptionsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.HAOptionsPanel.ForeColor = System.Drawing.Color.White;
+            this.HAOptionsPanel.Location = new System.Drawing.Point(5, 36);
+            this.HAOptionsPanel.Name = "HAOptionsPanel";
+            this.HAOptionsPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.HAOptionsPanel.ShowText = true;
+            this.HAOptionsPanel.Size = new System.Drawing.Size(149, 312);
+            this.HAOptionsPanel.TabIndex = 11;
+            this.HAOptionsPanel.Text = "Options";
             // 
             // lostButton1
             // 
@@ -290,8 +307,8 @@ namespace Password_Generator
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 356);
-            this.Controls.Add(this.lostBorderPanel2);
-            this.Controls.Add(this.lostBorderPanel1);
+            this.Controls.Add(this.HAOptionsPanel);
+            this.Controls.Add(this.HAResultPanel);
             this.Image = null;
             this.MaximizeBox = false;
             this.Name = "PasswordGeneratorForm";
@@ -300,8 +317,8 @@ namespace Password_Generator
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Password Generator";
-            this.lostBorderPanel1.ResumeLayout(false);
-            this.lostBorderPanel2.ResumeLayout(false);
+            this.HAResultPanel.ResumeLayout(false);
+            this.HAOptionsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NHAL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LHAL)).EndInit();
             this.ResumeLayout(false);
@@ -309,9 +326,9 @@ namespace Password_Generator
         }
 
         #endregion
-        private ReaLTaiizor.Controls.LostBorderPanel lostBorderPanel1;
+        private ReaLTaiizor.Controls.LostBorderPanel HAResultPanel;
         private ReaLTaiizor.Controls.LostButton GHAB;
-        private ReaLTaiizor.Controls.LostBorderPanel lostBorderPanel2;
+        private ReaLTaiizor.Controls.LostBorderPanel HAOptionsPanel;
         private ReaLTaiizor.Controls.LostLabel lostLabel2;
         private System.Windows.Forms.NumericUpDown NHAL;
         private ReaLTaiizor.Controls.LostLabel lostLabel1;
@@ -324,6 +341,7 @@ namespace Password_Generator
         private System.Windows.Forms.RichTextBox PLHARTB;
         private ReaLTaiizor.Controls.LostButton SaveHAB;
         private ReaLTaiizor.Controls.LostButton lostButton1;
+        private ReaLTaiizor.Controls.LostButton GSPHAB;
     }
 }
 

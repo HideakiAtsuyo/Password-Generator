@@ -27,7 +27,7 @@ namespace Password_Generator
             Properties.Settings.Default.DHAS = false;
             Properties.Settings.Default.SHAS = false;
             Properties.Settings.Default.BHAS = false;
-            Properties.Settings.Default.LHAS = 8;
+            Properties.Settings.Default.LHAS = 10;
             Properties.Settings.Default.NHAS = 10;
             Properties.Settings.Default.Save();
             LoadConfig();
@@ -123,6 +123,7 @@ namespace Password_Generator
             LoadConfig();
         }
 
+
         private void GHAB_Click(object sender, EventArgs e)
         {
             if(!UCHACB.Checked && !LCHACB.Checked && !DHACB.Checked && !SHACB.Checked && !BHACB.Checked)
@@ -134,16 +135,54 @@ namespace Password_Generator
                     MessageBox.Show("Wait a bit it'll take more time !");
                 new Thread(() => {
                     PLHARTB.Clear();
-                    GHAB.Enabled = false;
-                    PLHARTB.Enabled = false;
+                    /*Avoid Windows To Be Untouchable So You Can Move It*/
+                    HAOptionsPanel.Enabled = false;
+                    HAResultPanel.Enabled = false;
+                    /*Avoid Windows To Be Untouchable So You Can Move It*/
+                    //this.Enabled = false;
                     for (int i = 0; i < NHAL.Value; i++)
                     {
                         PLHARTB.Text += String.Format("{0}\n", Utils.RandomPassword((int)LHAL.Value, Config.chars));
                     }
-                    GHAB.Enabled = true;
-                    PLHARTB.Enabled = true;
+                    /*Avoid Windows To Be Untouchable So You Can Move It*/
+                    HAOptionsPanel.Enabled = true;
+                    HAResultPanel.Enabled = true;
+                    /*Avoid Windows To Be Untouchable So You Can Move It*/
+                    //this.Enabled = true;
                 }).Start();
             }
         }
+
+        private void GSPHAB_Click(object sender, EventArgs e)
+        {
+
+            if (!UCHACB.Checked && !LCHACB.Checked && !DHACB.Checked && !SHACB.Checked && !BHACB.Checked)
+            {
+                MessageBox.Show("Select atleast one option !");
+            }
+            else
+            {
+                if (NHAL.Value >= 1000)
+                    MessageBox.Show("Wait a bit it'll take more time !");
+                new Thread(() => {
+                    PLHARTB.Clear();
+                    /*Avoid Windows To Be Untouchable So You Can Move It*/
+                    HAOptionsPanel.Enabled = false;
+                    HAResultPanel.Enabled = false;
+                    /*Avoid Windows To Be Untouchable So You Can Move It*/
+                    //this.Enabled = false;
+                    for (int i = 0; i < NHAL.Value; i++)
+                    {
+                        PLHARTB.Text += String.Format("{0}\n", Utils.RandomPassword((int)LHAL.Value, Config.chars.S3CUR3()));
+                    }
+                    /*Avoid Windows To Be Untouchable So You Can Move It*/
+                    HAOptionsPanel.Enabled = true;
+                    HAResultPanel.Enabled = true;
+                    /*Avoid Windows To Be Untouchable So You Can Move It*/
+                    //this.Enabled = true;
+                }).Start();
+            }
+        }
+
     }
 }
