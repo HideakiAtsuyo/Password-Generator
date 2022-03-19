@@ -1,4 +1,4 @@
-﻿using ReaLTaiizor.Forms;
+using ReaLTaiizor.Forms;
 using System;
 using System.Threading;
 using System.Windows.Forms;
@@ -123,7 +123,6 @@ namespace Password_Generator
             LoadConfig();
         }
 
-
         private void GHAB_Click(object sender, EventArgs e)
         {
             if(!UCHACB.Checked && !LCHACB.Checked && !DHACB.Checked && !SHACB.Checked && !BHACB.Checked)
@@ -155,7 +154,6 @@ namespace Password_Generator
 
         private void GSPHAB_Click(object sender, EventArgs e)
         {
-
             if (!UCHACB.Checked && !LCHACB.Checked && !DHACB.Checked && !SHACB.Checked && !BHACB.Checked)
             {
                 MessageBox.Show("Select atleast one option !");
